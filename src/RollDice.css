@@ -1,0 +1,19 @@
+.dice {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.btn-roll {
+  font-size: 1.5em;
+  padding: 12px 32px;
+  border: none;
+  color: white;
+  background-color: darkblue;
+  border-radius: 8px;
+  transition-duration: 1s;
+}
+
+.btn-roll:hover {
+  background-color: black;
+}

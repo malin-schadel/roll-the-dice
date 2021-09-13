@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Die from './Die';
+import RollDice from './RollDice';
 
 function App() {
   return (
     <div className="App">
       <h1>Roll The Dice!</h1>
-      <Die />
+      <RollDice/>
     </div>
   );
 }
