@@ -1,20 +1,36 @@
+.container {
+  height: 280px;
+}
+
 .dice {
   display: flex;
   justify-content: center;
-  margin: auto;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  animation-name: slidein;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slidein {
+  from {transform: translate(-100%, 0%);}
+  to {transform: translate(0%, 0%);}
 }
 
 .btn-roll {
-  font-size: 1.5em;
-  padding: 12px 32px;
+  font-family: 'Play', sans-serif;
+  font-size: 2em;
+  width: 360px;
+  padding: 12px 0;
   border: none;
-  color: white;
-  border-radius: 8px;
   background-color: #343434;
-  transition: all .5s ease-out;
+  color: #FCFAF1;
+  border-radius: 8px;
 }
 
 .btn-roll:hover {
   cursor: pointer;
-  background-color: #343434;
 }

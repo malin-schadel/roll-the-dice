@@ -1,7 +1,16 @@
 .Die {
   font-size: 10em;
   padding: 0.25em;
-  background: -webkit-linear-gradient(120deg,#E3B04B, #F1D6AB);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #E3B04B;
+}
+
+.roll {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }
