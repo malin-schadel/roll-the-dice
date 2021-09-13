@@ -1,5 +1,7 @@
 .Die {
   font-size: 10em;
   padding: 0.25em;
-  color: darkblue;
+  background: -webkit-linear-gradient(120deg,#E3B04B, #F1D6AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

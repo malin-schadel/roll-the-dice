@@ -9,11 +9,12 @@
   padding: 12px 32px;
   border: none;
   color: white;
-  background-color: darkblue;
   border-radius: 8px;
-  transition-duration: 1s;
+  background-color: #343434;
+  transition: all .5s ease-out;
 }
 
 .btn-roll:hover {
-  background-color: black;
+  cursor: pointer;
+  background-color: #343434;
 }
