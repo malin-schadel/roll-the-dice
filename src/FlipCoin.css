@@ -1,0 +1,14 @@
+.btn-flip {
+  font-family: 'Play', sans-serif;
+  font-size: 2em;
+  width: 360px;
+  padding: 12px 0;
+  border: none;
+  background-color: #343434;
+  color: #FCFAF1;
+  border-radius: 8px;
+}
+
+.btn-flip:hover {
+  cursor: pointer;
+}
