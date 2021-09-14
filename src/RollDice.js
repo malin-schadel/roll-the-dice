@@ -28,11 +28,9 @@ class RollDice extends Component {
   render() {
     return(
     <div className='RollDice'>
-      <div className='container'>
-        <div className={`${this.state.rolling ? 'slide' : 'dice'}`}>
-          <Die face={this.state.die1} rolling={this.state.rolling}/>
-          <Die face={this.state.die2} rolling={this.state.rolling}/>
-        </div>
+      <div className={`${this.state.rolling ? 'slide' : 'dice'}`}>
+        <Die face={this.state.die1} rolling={this.state.rolling}/>
+        <Die face={this.state.die2} rolling={this.state.rolling}/>
       </div>
       <button className='btn-roll' onClick={this.genRandom} disabled={this.state.rolling}>
         {this.state.rolling ? 'Rolling' : 'Roll Dice'}
