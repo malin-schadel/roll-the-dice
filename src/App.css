@@ -5,4 +5,5 @@
 .App h1 {
   font-family: 'Major Mono Display', monospace;
   font-size: 2em;
+  margin-bottom: 0;
 }

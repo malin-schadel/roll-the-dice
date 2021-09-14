@@ -10,38 +10,45 @@ class FlipCoin extends Component {
   constructor(props){
     super(props)
     this.state = {coin: 'fab fa-bitcoin',
-                  flips: 0,
+                  numFlips: 0,
                   numHeads: 0,
                   numTails: 0,
                   flipping: false
                 }
-    this.flip = this.flip.bind(this)
-    this.increment = this.increment.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
-  flip() {
-    // generate a random value
+  flipCoin() {
     const coin = this.props.sides[(Math.floor(Math.random() * 2))]
-    // set state for coin
     this.setState({coin: coin, flipping: true})
-    // wait two seconds, then set flipping to false
     setTimeout(() => (
       this.setState({flipping: false})
     ), 2000)
   }
 
-  increment() {
-    
+  incrementCounter() {
+    this.setState(st => {
+      return {
+        numFlips: st.numFlips + 1,
+        numHeads: st.numHeads + (st.coin === 'fab fa-bitcoin' ? 0 : 1),
+        numTails: st.numTails + (st.coin === 'fab fa-bitcoin' ? 1 : 0)
+      }
+    })
+  }
+  
+  handleClick(e) {
+    this.flipCoin();
+    this.incrementCounter();
   }
 
   render() {
     return(
-      <div>
+      <div className="FlipCoin">
         <Coin face={this.state.coin} flipping={this.state.flipping}/>
-        <button className='btn-flip' onClick={this.flip} disabled={this.state.flipping}>
+        <button className='btn-flip' onClick={this.handleClick} disabled={this.state.flipping}>
           {this.state.flipping ? 'Flipping' : 'Flip Coin'}
         </button>
-        <p>{this.state.flips} Flips with {this.state.numHeads} times Heads and {this.state.numTails} times Tails</p>
+        <p>{this.state.numFlips} Flips: {this.state.numHeads} x Heads and {this.state.numTails} x Tails</p>
       </div>
     )
   }
