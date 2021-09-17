@@ -1,6 +1,8 @@
 import './App.css';
 import RollDice from './RollDice';
 import FlipCoin from './FlipCoin';
+import Hangman from './Hangman';
+
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <RollDice/>
       <h1>Flip The Coin!</h1>
       <FlipCoin/>
+      <h1>Hangman</h1>
+      <Hangman/>
     </div>
   );
 }
