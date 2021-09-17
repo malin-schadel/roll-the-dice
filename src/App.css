@@ -7,3 +7,18 @@
   font-size: 2em;
   margin-bottom: 0;
 }
+
+nav {
+  font-family: 'Major Mono Display', monospace;
+  background-color: #E3B04B;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 36px 0;
+  width: 100%;
+}
+
+nav a {
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 16px;
+}
