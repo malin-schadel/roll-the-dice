@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './RollDice.css';
 import Die from './Die';
+import {randomChoice} from "./helpers";
 
 class RollDice extends Component {
   static defaultProps = {
@@ -15,8 +16,8 @@ class RollDice extends Component {
 
   genRandom() {
     // generate two random values
-    const newDie1 = this.props.sides[(Math.floor(Math.random() * 6))]
-    const newDie2 = this.props.sides[(Math.floor(Math.random() * 6))]
+    const newDie1 = randomChoice(this.props.sides)
+    const newDie2 = randomChoice(this.props.sides)
     // set state for die1 and die2
     this.setState({die1: newDie1, die2: newDie2, rolling: true})
     // wait two seconds, then set rolling to false

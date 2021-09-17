@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './FlipCoin.css';
 import Coin from './Coin';
+import {randomChoice} from "./helpers";
 
 class FlipCoin extends Component {
   static defaultProps = {
@@ -19,7 +20,7 @@ class FlipCoin extends Component {
   }
 
   flipCoin() {
-    const coin = this.props.sides[(Math.floor(Math.random() * 2))]
+    const coin = randomChoice(this.props.sides)
     this.setState({coin: coin, flipping: true})
     setTimeout(() => (
       this.setState({flipping: false})

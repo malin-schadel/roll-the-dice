@@ -1,3 +1,5 @@
+import {randomChoice} from "./helpers";
+
 var ENGLISH_WORDS = [
   "their",
   "would",
@@ -1611,7 +1613,7 @@ var ENGLISH_WORDS = [
 ];
 
 function randomWord() {
-  return ENGLISH_WORDS[Math.floor(Math.random() * ENGLISH_WORDS.length)];
+  return randomChoice(ENGLISH_WORDS)
 }
 
 export { randomWord };

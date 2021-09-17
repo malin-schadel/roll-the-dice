@@ -1,4 +1,5 @@
 .Hangman {
+  display: inline;
   width: 400px;
   text-align: center;
   zoom: 1.3;
@@ -8,6 +9,7 @@
   border: 2px solid #343434;
   border-radius: 8px;
   width: 360px;
+  margin: 24px 0;
 }
 
 .Hangman h1 {
@@ -61,7 +63,8 @@
 }
 
 .Hangman .btn-restart {
-  display: inline;
+  display: block;
+  margin: auto;
   align-items: center;
   width: 360px;
   padding: 8px;
